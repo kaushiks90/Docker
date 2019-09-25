@@ -270,6 +270,7 @@ $ docker volume --help
 
 #### About volumes
 
+```
 -Commands:
 
   -create      Create a volume
@@ -277,6 +278,58 @@ $ docker volume --help
   -ls          List volumes
   -prune       Remove all unused local volumes
   -rm          Remove one or more volumes
+ ```
+
+# WORKING WITH Network
+
+### Lists the number of docker network present
+
+```
+$ docker network ls
+```
+
+### Create new network
+
+```
+$ docker network create networkName
+```
+
+### Attach container to nework
+
+```
+$ docker run --name containerName -d -it --net networkName imagename options
+```
+
+### Connect docker network to the container
+
+```
+$ docker network connect networkName containerName
+```
+
+### SSH into docker container
+
+```
+$ docker exec -it containerName options
+```
+
+### Disconnect network from docker container
+
+```
+$ docker network disconnect networkName containerName
+```
+
+### Remove docker network
+
+```
+$ docker network rm networkName
+```
+
+### Remove all the docker network
+
+```
+$ docker network prune
+```
+
 
 # UI tool for docker
 
