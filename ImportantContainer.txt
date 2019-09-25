@@ -1,0 +1,31 @@
+### Some sample container creation
+
+NGINX:
+
+
+$ docker container run -d -p 80:80 --name nginx nginx (-p 80:80 is optional as it runs on 80 by default)
+
+
+APACHE:
+
+
+$ docker container run -d -p 8080:80 --name apache httpd
+
+
+MONGODB:
+
+
+$ docker container run -d -p 27017:27017 --name mongo mongo
+
+
+MYSQL:
+
+
+$ docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
+
+
+CONTAINER INFO
+
+$ docker container inspect [NAME]
+
+
