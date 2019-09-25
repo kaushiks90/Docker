@@ -106,6 +106,36 @@ $ docker start <container id>
 $ docker inspect <container id>
 ```
 
+### SSH a container
+
+```
+$ docker exec –it <containerName> sh
+```
+
+### Pause a container
+
+```
+$ docker pause  <containerName>
+```
+
+### UnPause a container
+
+```
+$ docker unpause <containerName>
+```
+
+### Copy local file in to a container
+
+```
+$ docker container cp <fileName> <containerName>:/path
+```
+
+### Rename container name
+
+```
+$ docker rename container <containerName> <containerNewName>
+```
+
 ### Download docker container files
 
 ```
@@ -174,6 +204,18 @@ $ docker tag <image name> <Image Name>:<Version>
 
 ```
 $ docker inspect<image Id>
+```
+
+### save image as a tar file
+
+```
+$ docker save <imageName> -o tar File Name
+```
+
+### load image from your personal place
+
+```
+$ docker load -i tar <FileName>
 ```
 
 # UI tool for docker
