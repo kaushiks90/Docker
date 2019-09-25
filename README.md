@@ -218,6 +218,66 @@ $ docker save <imageName> -o tar File Name
 $ docker load -i tar <FileName>
 ```
 
+# WORKING WITH Volume
+
+### Lists the number of docker volume present
+
+```
+$ docker volume ls
+```
+
+### Create a new Volume
+
+```
+$ docker volume create volumeName
+```
+
+### Remove Volume
+
+```
+$ docker volume rm volumeName
+```
+
+### Remove all Volume
+
+```
+$ docker volume prune
+```
+
+### Attach Volume to container
+
+```
+$ docker container create containterName --mount source=volumeName,target=/foldername
+```
+
+### Inspect docker Volume
+
+```
+$ docker volume inspect volumeName
+```
+
+### To validate whether volume has been attached into container
+
+```
+$ docker container inspect containerName
+```
+
+### Get all the commands related with docker volume
+
+```
+$ docker volume --help
+```
+
+#### About volumes
+
+-Commands:
+
+  -create      Create a volume
+  -inspect     Display detailed information on one or more volumes
+  -ls          List volumes
+  -prune       Remove all unused local volumes
+  -rm          Remove one or more volumes
+
 # UI tool for docker
 
 #### Tip:
