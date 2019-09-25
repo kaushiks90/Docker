@@ -1,0 +1,11 @@
+command 
+docker-compose -f postgress.yaml up
+
+docker-compose -f pgadmin.yaml up
+
+
+localhost:8080/browser
+
+password  to logincan be found in the pgadmin
+
+Password to loging and create a db can be found inside postgress.yaml file
